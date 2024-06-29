@@ -9,7 +9,7 @@ const OnLoad = ({navigation}) => {
   useEffect(() => {
     const interval = setTimeout(() => {
       navigation.navigate('SplashScreen');
-    }, 5000); // 5 seconds delay
+    }, 8000); // 5 seconds delay
     return () => clearTimeout(interval); // Cleanup the interval if the component unmounts
   }, [{navigation}]);
 
@@ -18,7 +18,7 @@ const OnLoad = ({navigation}) => {
 
   <Image style={{marginHorizontal:'auto'}} source={require('../assets/icons/ani.gif')} />
 
-  <Text style={{textAlign:'center', color:'black', top:'50%', marginHorizontal:'3%' }} > A Currency Converter App Project, Designed and Implemented {'\n'} {'\n'} By {'\n'} {'\n'}  Fss/comp/com324/GRP11 {'\n'} {'\n'}   ©️ </Text>
+  <Text style={{textAlign:'center', color:'black', top:'50%', marginHorizontal:'3%', fontWeight:'700' }} > A Currency Converter Application Project, Designed and Implemented {'\n'} {'\n'} By {'\n'} {'\n'}  Fss/comp/com324/GRP11 {'\n'} {'\n'}   ©️ </Text>
 </View>
   )
 }
