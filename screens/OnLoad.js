@@ -9,7 +9,7 @@ const OnLoad = ({navigation}) => {
   useEffect(() => {
     const interval = setTimeout(() => {
       navigation.navigate('SplashScreen');
-    }, 8000); // 5 seconds delay
+    }, 10000); // 5 seconds delay
     return () => clearTimeout(interval); // Cleanup the interval if the component unmounts
   }, [{navigation}]);
 
