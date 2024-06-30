@@ -27,7 +27,7 @@ const SplashScreen1 = ({navigation}) => {
 
         <Text style={{fontFamily:'Sans', color:'white', fontSize:24, textAlign:'center', fontWeight:'650'}} > You've Been Thinking ? </Text>
 
-        <Text  style={{fontFamily:'Sans', color:'white', fontSize:16, textAlign:'center', marginHorizontal:'3%', marginTop:'10%'}} >Have You Been Thinking Where to Exchange Your Currency Withous Hassle, This is a currency converter thta depicts relational value and differences of two currencies</Text>
+        <Text  style={{fontFamily:'Sans', color:'white', fontSize:16, textAlign:'center', marginHorizontal:'3%', marginTop:'10%'}} >Have You Been Thinking Where to Exchange Your Currency Without Hassle, This is a currency converting Platform that depicts relational Value. With Over 200 currencies Spent Across The Globe</Text>
 
         <TouchableOpacity onPress={ ()=> navigation.navigate('SplashScreen2')} style={{ top:'10%', right:'-70%', padding:10,  backgroundColor:'#5D8AA8', width:'30%' }} >
             

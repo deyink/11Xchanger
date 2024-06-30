@@ -104,14 +104,14 @@ const Homepage = () => {
 
         </View>
 
-        <View style={{backgroundColor:'white', height:'40%', width:'93%', padding:'5%',  marginHorizontal:'auto', top:'-28%', borderRadius:20 }} >
+        <View style={{backgroundColor:'white', height:'60%', width:'93%', padding:'5%',  marginHorizontal:'auto', top:'-28%', borderRadius:20 }} >
     
 
             {/* <Text style={{fontSize:13}} >from</Text>
             <HorizontalLine /> */}
             {/* <Text> {selectedFro} </Text> */}
             <TextInput keyboardType='numeric' onChange={ (e)=> handleInput(e) } 
-              style={{height:35, width:'99%', color:'black', borderWidth:.5, borderRadius:10, placeholder:'Enter Amount', height:'20%', paddingHorizontal:10, fontSize:20, marginTop:'10%'  }} ></TextInput>
+              style={{height:35, width:'99%', color:'black', borderWidth:.5, borderRadius:10, placeholder:'Enter Amount', height:'12%', paddingHorizontal:10, fontSize:20, marginTop:'5%'  }} ></TextInput>
 
             
        
@@ -121,10 +121,23 @@ const Homepage = () => {
           </TouchableOpacity>
 
 
-          <Text style={{bottom:'-25%', textAlign:'right'}} > {from} {input} =  {output.toLocaleString()} {to}  </Text>
+          <Text style={{bottom:'-10%', textAlign:'right'}} > {from} {input} =  {output.toLocaleString()} {to}  </Text>
+
+          <View style={{flexDirection:'row', justifyContent:'space-around' , marginTop:'40%'}} >
+            <View>
+            <Image source={require('../assets/icons/like.png')} />
+            <Text style={{fontWeight:'600'}} >Like</Text>
+            </View>
+
+            <View>
+            <Image source={require('../assets/icons/share.png')} />
+            <Text style={{fontWeight:'500'}} >Share</Text>
+            </View>
+
+          </View>
         </View>
 
-
+     
       </View>
     
   )

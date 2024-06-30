@@ -14,7 +14,7 @@ const SplashScreen2 = ({navigation}) => {
 
         <Text style={{fontFamily:'Sans', color:'white', fontSize:24, textAlign:'center', fontWeight:'650'}} > How It Works ? </Text>
 
-        <Text  style={{fontFamily:'Sans', color:'white', fontSize:16, textAlign:'center', marginHorizontal:'3%', marginTop:'10%'}} > Our Currency Converter App Make Use of  a Real Time Update API,Self Over-The-Air, That gives the accurrate Rate Value as at the Time of Exchange.  </Text>
+        <Text  style={{fontFamily:'Sans', color:'white', fontSize:16, textAlign:'center', marginHorizontal:'3%', marginTop:'10%'}} > Our Currency-Converter-App Make Use of  a Real Time Update API, That gives Accurrate Rate Value as at the Time of Exchange.  </Text>
 
         <TouchableOpacity onPress={ ()=>{
             navigation.navigate('HomePage')
