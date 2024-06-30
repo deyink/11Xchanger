@@ -33,17 +33,32 @@ const Homepage = () => {
  
 
     useEffect(() => {
-        axios.get('https://v6.exchangerate-api.com/v6/3429a6d8dbf9af491e66dbff/latest/USD')
+        axios.get(`https://v6.exchangerate-api.com/v6/3429a6d8dbf9af491e66dbff/latest/USD`)
         .then(response => {
           setCurrencies(response.data.conversion_rates);
-          setInfo(response.data.conversion_rates[to])
+          setInfo(response.data.conversion_rates
+           [to] )
           
         })
         .catch(error => {
           console.error('Error fetching the currency data:', error);
           
         });
-    }, []);  
+    }, [to]);  
+
+    useEffect(() => {
+      axios.get(`https://v6.exchangerate-api.com/v6/3429a6d8dbf9af491e66dbff/latest/${from}`)
+      .then(response => {
+        setCurrencies(response.data.conversion_rates);
+        setInfo(response.data.conversion_rates
+         [to] )
+        
+      })
+      .catch(error => {
+        console.error('Error fetching the currency data:', error);
+        
+      });
+  }, [from, to]);  
 
     useEffect(() => {
       const backAction = () => {

@@ -27,13 +27,13 @@ const SplashScreen = ({navigation}) => {
                 navigation.navigate('SplashScreen1')
               
         }}
-      style={{padding:20, backgroundColor:'white', width:'90%', marginHorizontal:'auto', borderRadius:13, top:'1%'    }} >
+      style={{padding:20, backgroundColor:'white', width:'90%', marginHorizontal:'auto', borderRadius:13, top:'-1%'    }} >
             <Text style={{textAlign:'center', fontSize:16, fontFamily:'Sans' }} >
                 Get Started
             </Text>
         </TouchableOpacity>
 
-        {/* <Text style={{textAlign:'center', color:'white', top:'2%', }} > A Currency Converter App Project, Designed and Implemented By {'\n'}  Fss/comp/com321/GRP11 {'\n'}   ©️ </Text> */}
+        <Text style={{textAlign:'center', color:'white', top:'1%', }} > A Currency Converter App Project, Designed and Implemented By {'\n'}  Fss/comp/com324/GRP11 {'\n'}   ©️ </Text>
       
     </View>
   )
