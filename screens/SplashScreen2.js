@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity, Alert } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity, } from 'react-native'
 import React from 'react'
 import { useFonts } from 'expo-font';
 
@@ -18,7 +18,7 @@ const SplashScreen2 = ({navigation}) => {
 
         <TouchableOpacity onPress={ ()=>{
             navigation.navigate('HomePage')
-            Alert.alert('This is a Project Done By Students of Federal College of Statistics Ibadan Campus,')
+            alert('This is a Project Done By Students of Federal College of Statistics Ibadan Campus,')
         }
 
         }  style={{ top:'10%', right:'-70%', padding:10,  backgroundColor:'#4682B4', width:'30%' }} >

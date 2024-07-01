@@ -1,11 +1,28 @@
 import { View, Text, TouchableOpacity, ToastAndroid, BackHandler  } from 'react-native'
 import React, { useEffect } from 'react'
 import { useFonts } from 'expo-font'
+import * as Updates from 'expo-updates';
 
 const SplashScreen = ({navigation}) => {
     useFonts({Play:require('../assets/fonts/PlaywriteUSTrad-VariableFont_wght.ttf'),});
     useFonts({Sans:require('../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf'),});
 
+     componentDidMount = async ()=> {
+      await onFetchUpdateAsync();
+    }
+  
+    onFetchUpdateAsync = async () => {
+      try {
+        const update = await Updates.checkForUpdateAsync();
+  
+        if (update.isAvailable) {
+          await Updates.fetchUpdateAsync();
+          await Updates.reloadAsync();
+        }
+      } catch (error) {
+        alert(`Error fetching latest Expo update: ${error}`);
+      }
+    };
     useEffect(() => {
       const backAction = () => {
         ToastAndroid.show("Exiting the app", ToastAndroid.SHORT);
@@ -33,7 +50,7 @@ const SplashScreen = ({navigation}) => {
             </Text>
         </TouchableOpacity>
 
-        <Text style={{textAlign:'center', color:'white', top:'1%', }} > A Currency Converter App Project, Designed and Implemented By {'\n'}  Fss/comp/com324/GRP11 {'\n'}   ©️ </Text>
+        <Text style={{textAlign:'center', color:'white', top:'1%', }} > A Currency-Converter-App Project, Designed and Implemented By {'\n'}  Fss/comp/com324/GRP11 {'\n'}   ©️ </Text>
       
     </View>
   )
