@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, ToastAndroid, BackHandler  } from 'react-
 import React, { useEffect } from 'react'
 import { useFonts } from 'expo-font'
 import * as Updates from 'expo-updates';
+import { hs, ms, vs } from './Metrics';
 
 const SplashScreen = ({navigation}) => {
     useFonts({Play:require('../assets/fonts/PlaywriteUSTrad-VariableFont_wght.ttf'),});
@@ -36,21 +37,20 @@ const SplashScreen = ({navigation}) => {
     }, []);
 
   return (
-    <View style={{backgroundColor:'#5072A7', padding:2, height:'100%', width:'100%'}} >
-        <Text style={{color:'black', fontSize:210,marginHorizontal:'auto', marginTop:'28%', fontFamily:'Play' }} > 11 </Text>
-        <Text style={{ fontSize:34, fontFamily:'Play', backgroundColor:'#5072A7', color:'#fffcf3', width:'100%', top:'-32%', marginHorizontal:'30%'  }} >Xchanger</Text>
+    <View style={{backgroundColor:'#5072A7', padding:2, height:vs(812), width:hs(375)}} >
+        <Text style={{color:'black', fontSize:ms(180),marginHorizontal:'auto', marginTop:vs(170), fontFamily:'Play' }} > 11 </Text>
+        <Text style={{ fontSize:ms(33), fontFamily:'Play', backgroundColor:'#5072A7', color:'#fffcf3', width:'100%', top:vs(-220), marginHorizontal:hs(120)  }} >Xchanger</Text>
 
         <TouchableOpacity onPress={()=>{
                 navigation.navigate('SplashScreen1')
-              
         }}
-      style={{padding:20, backgroundColor:'white', width:'90%', marginHorizontal:'auto', borderRadius:13, top:'-1%'    }} >
+      style={{padding:20, backgroundColor:'white', width:hs(300), marginHorizontal:'auto', borderRadius:13, top:vs(-30) }} >
             <Text style={{textAlign:'center', fontSize:16, fontFamily:'Sans' }} >
                 Get Started
             </Text>
         </TouchableOpacity>
 
-        <Text style={{textAlign:'center', color:'white', top:'1%', }} > A Currency-Converter-App Project, Designed and Implemented By {'\n'}  Fss/comp/com324/GRP11 {'\n'}   ©️ </Text>
+        <Text style={{textAlign:'center', color:'white', top:vs(-30), }} > A Currency-Converter-App Project, Designed and Implemented {'\n'} By {'\n'}  Fss/comp/com324/GRP11 {'\n'}   ©️ </Text>
       
     </View>
   )
