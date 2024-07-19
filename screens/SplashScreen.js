@@ -8,22 +8,22 @@ const SplashScreen = ({navigation}) => {
     useFonts({Play:require('../assets/fonts/PlaywriteUSTrad-VariableFont_wght.ttf'),});
     useFonts({Sans:require('../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf'),});
 
-     componentDidMount = async ()=> {
-      await onFetchUpdateAsync();
-    }
+    //  componentDidMount = async ()=> {
+    //   await onFetchUpdateAsync();
+    // }
   
-    onFetchUpdateAsync = async () => {
-      try {
-        const update = await Updates.checkForUpdateAsync();
+    // onFetchUpdateAsync = async () => {
+    //   try {
+    //     const update = await Updates.checkForUpdateAsync();
   
-        if (update.isAvailable) {
-          await Updates.fetchUpdateAsync();
-          await Updates.reloadAsync();
-        }
-      } catch (error) {
-        alert(`Error fetching latest Expo update: ${error}`);
-      }
-    };
+    //     if (update.isAvailable) {
+    //       await Updates.fetchUpdateAsync();
+    //       await Updates.reloadAsync();
+    //     }
+    //   } catch (error) {
+    //     alert(`Error fetching latest Expo update: ${error}`);
+    //   }
+    // };
     useEffect(() => {
       const backAction = () => {
         ToastAndroid.show("Exiting the app", ToastAndroid.SHORT);
