@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, ToastAndroid, BackHandler  } from 'react-native'
 import React, { useEffect } from 'react'
 import { useFonts } from 'expo-font'
-import * as Updates from 'expo-updates';
+
 import { hs, ms, vs } from './Metrics';
 
 const SplashScreen = ({navigation}) => {
